@@ -1,0 +1,10 @@
+<h1>Groups#index</h1>
+
+<div>
+  <% if @groups.blank? %>
+    <p>No groups yet.</p>
+  <% else %>
+    <%= render 'list' %>
+  <% end %>
+  <%= link_to 'New Group', new_group_path %>
+</div>

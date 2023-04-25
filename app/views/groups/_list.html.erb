@@ -1,0 +1,7 @@
+<% @groups.each do |group| %>
+  <div>
+    <%= image_tag group.icon %>
+    <%= group.name %>
+    <%= group.total_price %>
+  </div>
+<% end %>
