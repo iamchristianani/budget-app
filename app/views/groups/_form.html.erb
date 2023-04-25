@@ -1,0 +1,21 @@
+<%= form_for @group, url: groups_path, local: true, data: { turbo: false }, method: :post do |form| %>
+  <% if @group.errors.any? %>
+      <ul>
+        <% @group.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+  <% end %>
+  <div class="mb-3">
+    <%= form.label :name %>
+    <%= form.text_field :name, autofocus: true, placeholder: 'Group Name' %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :icon %>
+    <%= form.text_field :icon, autofocus: true, placeholder: 'Icon image URL' %>
+  </div>
+  <div>
+    <%= form.submit "Create Group", class: "btn btn-primary" %>
+    <%= link_to "Cancel", groups_path, class: "btn btn-primary cancel-link" %>
+  </div>
+<% end %>
