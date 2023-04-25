@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Expense, type: :model do
   # subject do
   #   user = User.create(name: 'John Doe', email: 'john@example.com', password: 'password', confirmed_at: Time.now)
   # end
