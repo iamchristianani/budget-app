@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @groups = Group.all
+    @groups = current_user.groups
   end
 
   def new
@@ -8,20 +9,19 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
-    @group.author_id = current_user.id
-    if @group.save
-      flash[:success] = 'Group created successfully'
-      redirect_to groups_path
+    group = Group.new(group_params)
+    group.author_id = current_user.id
+
+    if group.save
+      redirect_to groups_path, notice: 'Group successfully created.'
     else
-      flash[:danger] = 'Group not created'
-      render :new, status: :unprocessable_entity
+      redirect_to new_group_path, notice: 'Group could not be created.'
     end
   end
 
   private
 
   def group_params
-    params.require(:group).permit(:name, :icon)
+    params.require(:new_group).permit(:name, :icon)
   end
 end
