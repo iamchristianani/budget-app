@@ -42,13 +42,13 @@ This app is build with Ruby on Rails and Postgresql.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()- Powered by Render
+- [Live Demo Link](https://bill-splitter-v1fd.onrender.com/)- Powered by Render
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Video Presentation <a name="presentation"></a>
 
-- [Video Presentation Link]()- Powered by Loom
+- [Video Presentation Link](https://www.loom.com/share/76ca96e7229f4800aa389e397c523c7b)- Powered by Loom
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
