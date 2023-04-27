@@ -15,6 +15,7 @@
     - [Install](#install)
     - [Usage](#usage)
   - [👥 Authors](#-authors)
+  - [🔭 Future Feautures](#-future-features)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -134,6 +135,16 @@ In order to run this project you need:
 - GitHub: [@iamchristianani](https://github.com/iamchristianani)
 - Twitter: [@kriznode](https://twitter.com/kriznode)
 - LinkedIn: [Christian Ani](https://www.linkedin.com/in/anikriz/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Implemnt more UX design**
+- [ ] **Create Desktop view**
+- [ ] **Implement the side menu**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
