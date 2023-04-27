@@ -1,2 +1,11 @@
-<h1>Expenses#index</h1>
-<p>Find me in app/views/expenses/index.html.erb</p>
+<section>
+  <h2 class="text-center">Expenses</h2>
+  <div class="text-secondary text-center">Group - <%= @group.name %></div>
+  <p>Total price: $<%= @group.total_price %></p>
+  <% if @expenses.blank? %>
+    <p>No Expenses found.</p>
+  <% else %>
+    <%= render 'list' %>
+  <% end %>
+  <%= link_to 'Add a new Expense', new_expense_path, class: 'btn bg-sec w-100 text-light' %>
+</section>

@@ -1,0 +1,20 @@
+<%= form_with model: @expense, method: :post, scope: :new_expense do |form| %>
+  <div>
+    <%= form.label :name, class: 'form-label' %> <br>
+    <%= form.text_field :name, autofocus: true, placeholder: 'Expense name', class: 'form-control', required: true %>
+  </div>
+
+  <div>
+    <%= form.label :amount, class: 'form-label' %> <br>
+    <%= form.number_field :amount, autofocus: true, placeholder: 'Expense amount ($)', class: 'form-control', required: true %>
+  </div>
+  
+  <div>
+    <%= form.fields_for :expense_groups do |cp| %>
+      <%= cp.label :group_ids, 'Groups (atleast one)', class: 'form-label' %> <br>
+      <%= cp.collection_select :group_ids, @all_groups, :id, :name, {}, { multiple: true, required: true, class: 'form-select', size: 2 } %>
+    <% end %>
+  </div>
+
+  <%= form.submit 'Create', class: 'btn bg-pri w-100 text-light mt-4' %>
+<% end %>
