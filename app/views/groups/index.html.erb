@@ -1,10 +1,9 @@
-<h1>Groups#index</h1>
-
-<div>
-  <% if @groups.blank? %>
-    <p>No groups yet.</p>
-  <% else %>
+<section>
+  <h2 class="text-center">Groups</h2>
+  <% unless @groups.empty? %>
     <%= render 'list' %>
+  <% else %>
+    <p>No groups available</p>
   <% end %>
-  <%= link_to 'New Group', new_group_path %>
-</div>
+  <%= link_to 'Add a new group', new_group_path, class: 'btn bg-sec w-100 text-light' %>
+</section>
