@@ -7,7 +7,7 @@
             <span class="fs-2"><%= group.name %></span>
             <span class="fs-6"><%= group.created_at.strftime('%d %b %Y') %></span>
           </div>
-          <span><%= pluralize(group.expenses_count, 'expense') %></span>
+          <span>$<%= group.expenses.sum(:amount) %></span>
         </li>
       <% end %>
   <% end %>

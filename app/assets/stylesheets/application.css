@@ -48,10 +48,35 @@ a {
 }
 
 main > section {
-  min-height: 70vh;
+  height: 70vh;
+  margin-top: -30px;
+  overflow-y: scroll;
 }
 
 ul {
   list-style-type: none;
   padding: 0 !important;
+}
+
+.bottom-btn-div {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5fb523;
+  padding: 10px;
+}
+
+.bottom-btn {
+  display: block;
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 5px;
 }

@@ -7,5 +7,7 @@
   <% else %>
     <%= render 'list' %>
   <% end %>
-  <%= link_to 'Add a new Expense', new_expense_path, class: 'btn bg-sec w-100 text-light' %>
+  <div class="bottom-btn-div">
+    <%= link_to 'Add a new Expense', new_expense_path, class: 'bg-sec text-light bottom-btn' %>
+  </div>
 </section>

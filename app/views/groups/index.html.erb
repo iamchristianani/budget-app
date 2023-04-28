@@ -1,9 +1,13 @@
 <section>
   <h2 class="text-center">Groups</h2>
-  <% unless @groups.empty? %>
-    <%= render 'list' %>
-  <% else %>
-    <p>No groups available</p>
-  <% end %>
-  <%= link_to 'Add a new group', new_group_path, class: 'btn bg-sec w-100 text-light' %>
+  <div class="page-content">
+    <% unless @groups.empty? %>
+      <%= render 'list' %>
+    <% else %>
+      <p>No groups available</p>
+    <% end %>
+  </div>
+  <div class="bottom-btn-div">
+    <%= link_to 'Add a new group', new_group_path, class: 'bg-sec text-light bottom-btn' %>
+  </div>
 </section>
