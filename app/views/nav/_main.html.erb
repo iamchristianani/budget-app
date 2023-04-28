@@ -1,0 +1,19 @@
+<nav class="bg-pri navbar">
+  <div class="py-1 px-3 d-flex align-items-center w-100">
+    <% if current_user %>
+      <% if current_page?(controller: 'expenses', action: 'new')%>
+        <%= link_to '<', :back, class: style %>
+      <% elsif !current_page?(controller: 'groups') %>
+        <%= link_to '<', groups_path, class: style %>
+      <% end %>
+    <% end %>
+    <h1 class="logo navbar-brand fs-5 fw-light text-light my-0 mx-auto">
+      <%= link_to unauthenticated_root_path, class: 'nav-logo-text' do %>
+        Bill Splitter 💵
+      <% end %>
+    </h1>
+    <% if current_user %>
+      <%= link_to 'Sign out', destroy_user_session_path, class: 'btn bg-light' %>
+    <% end %>
+  </div>
+</nav>

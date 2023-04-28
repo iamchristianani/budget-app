@@ -1,0 +1,14 @@
+<ul class="d-flex flex-column gap-4">
+  <% @groups.each do |group| %>
+      <%= link_to group_expenses_path(group), class: 'text-decoration-none' do %>
+        <li class="border border-light shadow-sm rounded p-3 d-flex gap-2">
+          <img src="<%= group.icon %>" width="50" height="50" alt="[icon]" class="w-20"/>
+          <div class="d-flex flex-column justify-content-between w-100">
+            <span class="fs-2"><%= group.name %></span>
+            <span class="fs-6"><%= group.created_at.strftime('%d %b %Y') %></span>
+          </div>
+          <span>$<%= group.expenses.sum(:amount) %></span>
+        </li>
+      <% end %>
+  <% end %>
+</ul>

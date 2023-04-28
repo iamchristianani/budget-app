@@ -1,0 +1,14 @@
+<%= form_with model: @group, method: :post, scope: :new_group, html: {class: 'd-flex flex-column gap-3'} do |form| %>
+  <div>
+    <%= form.label :name, class: 'form-label' %> <br>
+    <%= form.text_field :name, autofocus: true, placeholder: 'Group name', class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :icon, class: 'form-label' %> <br>
+    <%= form.text_field :icon, autofocus: true, placeholder: 'Icon image URL', class: 'form-control' %>
+  </div>
+
+  <%= form.submit 'Create', class: 'btn bg-pri w-100 text-light' %>
+  <%= link_to "Cancel", groups_path, class: "btn btn-primary cancel-link" %>
+<% end %>
