@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Expenses page', type: :feature do
   before :each do
-    @user = User.create(name: 'John Doe', email: 'john@example.com', password: 'password', confirmed_at: Time.now)
+    @user = User.create(name: 'John Doe', email: 'john@example.com', password: 'password')
 
     visit new_user_session_path
 

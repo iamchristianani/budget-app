@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe GroupsController, type: :request do
   include Devise::Test::IntegrationHelpers
   before(:example) do
-    @user = User.create(name: 'John Doe', email: 'johndoe@example.com', password: 'password', confirmed_at: Time.now)
+    @user = User.create(name: 'John Doe', email: 'johndoe@example.com', password: 'password')
     @group = Group.create(name: 'Fruits', icon: 'fruits.jpg', author_id: @user.id)
     @expense = Expense.create(name: 'Banana', amount: 10, author_id: @user.id)
     @expense.groups << @group

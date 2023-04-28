@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :each do
-    @user = User.create(name: 'John Doe', email: 'john@example.com', password: 'password', confirmed_at: Time.now)
+    @user = User.create(name: 'John Doe', email: 'john@example.com', password: 'password')
   end
 
   it 'is valid with valid attributes' do
